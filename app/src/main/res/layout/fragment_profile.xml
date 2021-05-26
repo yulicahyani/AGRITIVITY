@@ -31,7 +31,6 @@
                     android:layout_gravity="center"
                     android:src="@color/green"
                     tools:ignore="MissingClass" />
-
             </androidx.cardview.widget.CardView>
 
             <TextView
