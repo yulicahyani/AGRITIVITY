@@ -16,7 +16,7 @@ object DataDummy {
                         "Karangasem",
                         "10 tahun",
                         "Menanam stroberi",
-                        "085123345221",
+                        "6285647065215",
                         "Saya pekerja yang sangat rajin pantang menyerah dan siap bekerja keras.",
                         R.drawable.petani
                 )
@@ -30,7 +30,7 @@ object DataDummy {
                         "Singaraja",
                         "12 tahun",
                         "Menanam Sayur-sayuran",
-                        "089786538490",
+                        "6289786538490",
                         "Saya pekerja yang sangat rajin pantang menyerah dan siap bekerja keras.",
                         R.drawable.petani
                 )

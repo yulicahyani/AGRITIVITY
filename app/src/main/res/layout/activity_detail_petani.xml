@@ -25,7 +25,9 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <include layout="@layout/content_detail_petani" />
+        <include
+            android:id="@+id/content_detail_petani"
+            layout="@layout/content_detail_petani" />
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:backgroundTint="@color/green"
+        app:srcCompat="@drawable/ic_baseline_chat_24" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

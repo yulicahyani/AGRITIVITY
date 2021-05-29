@@ -1,10 +1,12 @@
 package com.bc0098.agritivity.ui.petani
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bc0098.agritivity.data.PetaniEntity
 import com.bc0098.agritivity.databinding.ItemsPetaniBinding
+import com.bc0098.agritivity.ui.detail.petani.DetailPetaniActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -44,6 +46,12 @@ class PetaniAdapter: RecyclerView.Adapter<PetaniAdapter.PetaniViewHolder>() {
                 petaniNama.text = petani.nama
                 petaniDomisili.text = petani.domisili
                 petaniStatus.text = petani.status
+
+                itemView.setOnClickListener {
+                    val intent = Intent(it.context, DetailPetaniActivity::class.java)
+                    intent.putExtra(DetailPetaniActivity.EXTRA_ID, petani.id)
+                    it.context.startActivity(intent)
+                }
             }
         }
 

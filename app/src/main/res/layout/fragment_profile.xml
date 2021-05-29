@@ -67,7 +67,8 @@
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="4dp"
                         android:text="Status : Petani (Buruh Tani)"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:background="@drawable/border"/>
 
                     <TextView
                         android:id="@+id/keahlian"
@@ -77,7 +78,8 @@
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="4dp"
                         android:text="Keahlian : Menanam Stroberi"
-                        android:textSize="18sp"  />
+                        android:textSize="18sp"
+                        android:background="@drawable/border"/>
 
                     <TextView
                         android:id="@+id/domisili"
@@ -87,7 +89,8 @@
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="4dp"
                         android:text="Domisili : Karangasem"
-                        android:textSize="18sp"  />
+                        android:textSize="18sp"
+                        android:background="@drawable/border"/>
 
                     <TextView
                         android:id="@+id/pengalaman"
@@ -97,7 +100,8 @@
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="4dp"
                         android:text="Pengalaman Kerja : 10 tahun"
-                        android:textSize="18sp"  />
+                        android:textSize="18sp"
+                        android:background="@drawable/border"/>
 
                     <TextView
                         android:id="@+id/no_telp"
@@ -116,7 +120,8 @@
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="4dp"
                         android:text="Keterangan : "
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:background="@drawable/border"/>
 
                     <TextView
                         android:id="@+id/keterangan"
@@ -125,7 +130,8 @@
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="4dp"
                         android:text="Saya pekerja yang sangat rajin pantang menyerah dan siap bekerja keras."
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:background="@drawable/border"/>
 
                 </LinearLayout>
 
