@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bc0098.agritivity.R
 import com.bc0098.agritivity.databinding.FragmentHomeBinding
 import com.bc0098.agritivity.ui.panduan.PanduanActivity
+import com.bc0098.agritivity.ui.petani.PetaniActivity
 
 class HomeFragment : Fragment() {
 
@@ -28,6 +28,10 @@ class HomeFragment : Fragment() {
 
         fragmentHomeBinding.panduan.setOnClickListener{
             val moveIntent = Intent(it.context, PanduanActivity::class.java)
+            startActivity(moveIntent)
+        }
+        fragmentHomeBinding.petani.setOnClickListener {
+            val moveIntent = Intent(it.context, PetaniActivity::class.java)
             startActivity(moveIntent)
         }
     }
