@@ -1,5 +1,6 @@
 package com.bc0098.agritivity
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,10 @@ import androidx.navigation.ui.setupWithNavController
 import com.bc0098.agritivity.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    companion object{
+        const val IMG = "img"
+    }
 
     private lateinit var activityMainMainBinding: ActivityMainBinding
 
@@ -26,4 +31,5 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "727448934545",
+    "project_id": "agritivity",
+    "storage_bucket": "agritivity.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727448934545:android:654f8059b461690913c730",
+        "android_client_info": {
+          "package_name": "com.bc0098.agritivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727448934545-oo7oeev2nfgq3d8k7ruuqb4vrsbolmjj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfo19FJSLM_9Wx55cta9VYdu5MHXzR6U8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727448934545-oo7oeev2nfgq3d8k7ruuqb4vrsbolmjj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

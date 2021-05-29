@@ -1,23 +1,34 @@
 package com.bc0098.agritivity.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.bc0098.agritivity.R
+import com.bc0098.agritivity.databinding.FragmentHomeBinding
+import com.bc0098.agritivity.ui.panduan.PanduanActivity
 
 class HomeFragment : Fragment() {
+
+    private lateinit var fragmentHomeBinding: FragmentHomeBinding
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        return root
+    ): View {
+        fragmentHomeBinding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+        return fragmentHomeBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        fragmentHomeBinding.panduan.setOnClickListener{
+            val moveIntent = Intent(it.context, PanduanActivity::class.java)
+            startActivity(moveIntent)
+        }
     }
 }

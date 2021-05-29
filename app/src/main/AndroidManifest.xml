@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.bc0098.agritivity">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -9,10 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AGRITIVITY">
+        <activity android:name=".ui.panduan.HasilCameraActivity"></activity>
+        <activity android:name=".ui.panduan.CameraActivity" />
+        <activity android:name=".ui.panduan.PanduanActivity" />
         <activity
             android:name=".ui.detail.petani.DetailPetaniActivity"
             android:label="@string/title_activity_detail_petani"
-            android:theme="@style/Theme.AGRITIVITY.NoActionBar"></activity>
+            android:theme="@style/Theme.AGRITIVITY.NoActionBar" />
         <activity
             android:name=".ui.detail.berita.DetailBeritaActivity"
             android:label="@string/title_activity_detail_berita"
