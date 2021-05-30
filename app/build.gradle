@@ -69,5 +69,14 @@ dependencies {
 
     //noinspection GradleCompatible
     implementation 'com.google.firebase:firebase-storage:9.2.1'
-    implementation 'com.google.firebase:firebase-auth:9.2.1'
+    implementation 'com.google.firebase:firebase-auth:9.2.1'\
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$okhttpVersion"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$archLifecycleVersion"
+    implementation "androidx.test.espresso:espresso-idling-resource:$idleResourceVersion"
 }

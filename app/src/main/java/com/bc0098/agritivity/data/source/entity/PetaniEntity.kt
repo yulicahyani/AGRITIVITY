@@ -1,4 +1,4 @@
-package com.bc0098.agritivity.data
+package com.bc0098.agritivity.data.source.entity
 
 data class PetaniEntity(
         val id: Int,

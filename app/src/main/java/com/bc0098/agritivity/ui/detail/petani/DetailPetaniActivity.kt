@@ -5,12 +5,10 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bc0098.agritivity.R
-import com.bc0098.agritivity.data.PetaniEntity
+import com.bc0098.agritivity.data.source.entity.PetaniEntity
 import com.bc0098.agritivity.databinding.ActivityDetailPetaniBinding
 import com.bc0098.agritivity.databinding.ContentDetailPetaniBinding
 import com.bumptech.glide.Glide

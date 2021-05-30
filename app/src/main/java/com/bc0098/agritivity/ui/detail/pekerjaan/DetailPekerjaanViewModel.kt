@@ -1,8 +1,8 @@
 package com.bc0098.agritivity.ui.detail.pekerjaan
 
 import androidx.lifecycle.ViewModel
-import com.bc0098.agritivity.data.PekerjaanEntity
-import com.bc0098.agritivity.data.PetaniEntity
+import com.bc0098.agritivity.data.source.entity.PekerjaanEntity
+import com.bc0098.agritivity.data.source.entity.PetaniEntity
 import com.bc0098.agritivity.utils.DataDummy
 
 class DetailPekerjaanViewModel: ViewModel() {

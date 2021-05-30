@@ -4,8 +4,8 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bc0098.agritivity.data.PekerjaanEntity
-import com.bc0098.agritivity.data.PetaniEntity
+import com.bc0098.agritivity.data.source.entity.PekerjaanEntity
+import com.bc0098.agritivity.data.source.entity.PetaniEntity
 import com.bc0098.agritivity.databinding.ItemsPekerjaanBinding
 import com.bc0098.agritivity.ui.detail.pekerjaan.DetailPekerjaanActivity
 import com.bc0098.agritivity.utils.DataDummy

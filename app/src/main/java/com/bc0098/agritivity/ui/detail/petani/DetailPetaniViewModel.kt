@@ -1,7 +1,7 @@
 package com.bc0098.agritivity.ui.detail.petani
 
 import androidx.lifecycle.ViewModel
-import com.bc0098.agritivity.data.PetaniEntity
+import com.bc0098.agritivity.data.source.entity.PetaniEntity
 import com.bc0098.agritivity.utils.DataDummy
 
 class DetailPetaniViewModel : ViewModel(){
@@ -12,7 +12,7 @@ class DetailPetaniViewModel : ViewModel(){
         this.petaniId = petaniId
     }
 
-    fun getDetailPetani(): PetaniEntity{
+    fun getDetailPetani(): PetaniEntity {
         lateinit var petani: PetaniEntity
         val petaniList = DataDummy.generateDummyPetani()
         for (p in petaniList){
