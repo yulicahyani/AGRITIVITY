@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bc0098.agritivity.databinding.FragmentHomeBinding
 import com.bc0098.agritivity.ui.panduan.PanduanActivity
+import com.bc0098.agritivity.ui.pekerjaan.PekerjaanActivity
 import com.bc0098.agritivity.ui.petani.PetaniActivity
 
 class HomeFragment : Fragment() {
@@ -27,12 +28,16 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         fragmentHomeBinding.panduan.setOnClickListener{
-            val moveIntent = Intent(it.context, PanduanActivity::class.java)
-            startActivity(moveIntent)
+            val panduanIntent = Intent(it.context, PanduanActivity::class.java)
+            startActivity(panduanIntent)
         }
         fragmentHomeBinding.petani.setOnClickListener {
-            val moveIntent = Intent(it.context, PetaniActivity::class.java)
-            startActivity(moveIntent)
+            val petaniIntent = Intent(it.context, PetaniActivity::class.java)
+            startActivity(petaniIntent)
+        }
+        fragmentHomeBinding.pekerjaan.setOnClickListener {
+            val pekerjaanIntent = Intent(it.context, PekerjaanActivity::class.java)
+            startActivity(pekerjaanIntent)
         }
     }
 }

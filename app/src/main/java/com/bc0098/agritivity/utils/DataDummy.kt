@@ -1,6 +1,7 @@
 package com.bc0098.agritivity.utils
 
 import com.bc0098.agritivity.R
+import com.bc0098.agritivity.data.PekerjaanEntity
 import com.bc0098.agritivity.data.PetaniEntity
 
 object DataDummy {
@@ -30,12 +31,46 @@ object DataDummy {
                         "Singaraja",
                         "12 tahun",
                         "Menanam Sayur-sayuran",
-                        "6289786538490",
+                        "6285647065215",
                         "Saya pekerja yang sangat rajin pantang menyerah dan siap bekerja keras.",
                         R.drawable.petani
                 )
         )
 
         return petani
+    }
+
+    fun generateDummyPekerjaan(): List<PekerjaanEntity>{
+        val pekerjaan = ArrayList<PekerjaanEntity>()
+
+        pekerjaan.add(
+            PekerjaanEntity(
+                1,
+                2,
+                "Jumat, 4 Juni 2021",
+                "Br. Batu, Desa Pererenan,  Menggwi, Badung, Bali",
+                "Rp75.000 - Rp125.000",
+                "3 orang",
+                "5 are",
+                "Memanen stroberi yang sudah matang dengan gunting khusus yang sudah disediakan.",
+                R.drawable.lahan_stroberi
+            )
+        )
+
+        pekerjaan.add(
+            PekerjaanEntity(
+                2,
+                2,
+                "Jumat, 4 Juni 2021",
+                "Br. Batu, Desa Pererenan,  Menggwi, Badung, Bali",
+                "Rp75.000 - Rp125.000",
+                "3 orang",
+                "5 are",
+                "Memanen stroberi yang sudah matang dengan gunting khusus yang sudah disediakan.",
+                R.drawable.lahan_stroberi
+            )
+        )
+
+        return pekerjaan
     }
 }
