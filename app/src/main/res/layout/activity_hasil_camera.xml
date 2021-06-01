@@ -31,4 +31,19 @@
 
     </LinearLayout>
 
+    <ImageButton
+        android:id="@+id/upload_btn_hasil"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_send_24"
+        android:background="@color/green"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/hasil_prediksi"
+        android:text="hasil prediksi"/>
+
 </LinearLayout>

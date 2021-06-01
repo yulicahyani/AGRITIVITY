@@ -8,6 +8,10 @@ import com.bc0098.agritivity.databinding.ActivityPanduanBinding
 
 class PanduanActivity : AppCompatActivity() {
 
+//    companion object{
+//        const val HASIL_PREDIKSI = "hasil_prediksi"
+//    }
+
     private lateinit var activityPanduanBinding: ActivityPanduanBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +24,9 @@ class PanduanActivity : AppCompatActivity() {
             val moveIntent = Intent(it.context, CameraActivity::class.java)
             startActivity(moveIntent)
         }
+
+//        val hasil = intent.getStringExtra(HASIL_PREDIKSI)
+//        activityPanduanBinding.resultPredict.text = hasil
     }
 
 }
