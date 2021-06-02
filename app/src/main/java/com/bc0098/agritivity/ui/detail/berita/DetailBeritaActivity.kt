@@ -1,5 +1,6 @@
 package com.bc0098.agritivity.ui.detail.berita
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -18,6 +19,7 @@ class DetailBeritaActivity : AppCompatActivity() {
         const val author = "author"
         const val titles = "title"
         const val waktu = "waktu"
+        const val url = "url"
         const val sumber = "sumber"
         const val image = "image"
         const val contents = "content"
@@ -43,6 +45,7 @@ class DetailBeritaActivity : AppCompatActivity() {
         val sumber1 = intent.getStringExtra(sumber)
         val image1 = intent.getStringExtra(image)
         val contents1 = intent.getStringExtra(contents)
+        val url = intent.getStringExtra(url)
 
         with(contentDetailBeritaBinding){
             judulBerita.text = title1
@@ -53,6 +56,12 @@ class DetailBeritaActivity : AppCompatActivity() {
                 .into(imgBerita)
             sumberPenulis.text = StringBuilder("$sumber1 - $author1")
             contentBerita.text = contents1
+        }
+
+        activityDetailBeritaBinding.contentDetailBerita.baca.setOnClickListener {
+            val intent = Intent(this, BeritaWebViewActivity::class.java)
+            intent.putExtra(BeritaWebViewActivity.BERITA_URL, url)
+            startActivity(intent)
         }
 
     }

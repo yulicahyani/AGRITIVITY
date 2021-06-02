@@ -30,6 +30,7 @@ class AgritivityRepository private constructor(private val remoteDataSource: Rem
                         response.author,
                         response.title,
                         response.description,
+                        response.url,
                         response.waktu,
                         response.sumber,
                         response.image,

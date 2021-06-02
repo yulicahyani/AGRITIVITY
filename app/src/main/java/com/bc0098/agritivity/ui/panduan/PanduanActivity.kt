@@ -42,9 +42,7 @@ class PanduanActivity : AppCompatActivity() {
         val hasil = intent.getStringExtra(HASIL_PREDIKSI)
         activityPanduanBinding.resultPredict.text = hasil
 
-        val keyword = "panduan bertani"
-
-//        val keyword = hasil
+        val keyword = "panduan bertani $hasil"
 
         panduanAdapter = PanduanAdapter()
         panduanViewModelFactory = ViewModelFactory.getInstance(this)

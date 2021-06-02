@@ -52,7 +52,7 @@ class DetailPekerjaanActivity : AppCompatActivity() {
 
         activityDetailPekerjaanBinding.fabChat.setOnClickListener {
             if (isWhatsAppInstalled()){
-                val waIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone="+detailPetani.noTelp+"&text="+"Halo saya adalah buruh tani"))
+                val waIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://api.whatsapp.com/send?phone="+detailPetani.noTelp+"&text="+"Halo saya ingin melamar pekerjaan"))
                 startActivity(waIntent)
             }
             else{

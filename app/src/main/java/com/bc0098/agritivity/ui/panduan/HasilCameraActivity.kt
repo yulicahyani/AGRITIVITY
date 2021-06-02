@@ -7,6 +7,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bc0098.agritivity.api.CloudFunctionApiConfig
@@ -60,9 +61,12 @@ class HasilCameraActivity : AppCompatActivity() {
 
     private fun callCloudFunction(){
 
+        activityHasilCameraBinding.progressBar.visibility = View.VISIBLE
+
         CloudFunctionApiConfig.getApiService().getResult().enqueue(object : Callback<PredictResponse>{
             override fun onResponse(call: Call<PredictResponse>, response: Response<PredictResponse>, ) {
                 if (response.isSuccessful){
+                    activityHasilCameraBinding.progressBar.visibility = View.GONE
                     response.body()?.let { showResponse(it.prediction) }
                     Log.i(TAG, "post submitted to API." + response.body().toString())
                 }

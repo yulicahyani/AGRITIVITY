@@ -56,6 +56,7 @@ class BeritaAdapter: RecyclerView.Adapter<BeritaAdapter.BeritaViewHolder>() {
                     intent.putExtra(DetailBeritaActivity.sumber, berita.sumber.name)
                     intent.putExtra(DetailBeritaActivity.image, berita.image)
                     intent.putExtra(DetailBeritaActivity.contents, berita.content)
+                    intent.putExtra(DetailBeritaActivity.url, berita.url)
                     it.context.startActivity(intent)
                 }
             }

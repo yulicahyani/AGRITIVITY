@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AGRITIVITY">
-        <activity android:name=".ui.panduan.YoutubeViewActivity"></activity>
+        <activity android:name=".ui.detail.berita.BeritaWebViewActivity"></activity>
+        <activity android:name=".ui.panduan.YoutubeViewActivity" />
         <activity android:name=".ui.petani.PetaniActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

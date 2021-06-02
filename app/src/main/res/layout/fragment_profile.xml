@@ -32,7 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:src="@color/green"
+                    android:src="@drawable/profil"
                     tools:ignore="MissingClass" />
             </androidx.cardview.widget.CardView>
 
@@ -110,7 +110,7 @@
                         android:layout_marginBottom="8dp"
                         android:paddingHorizontal="8dp"
                         android:paddingVertical="4dp"
-                        android:text="No Telp : 085123345221"
+                        android:text="No Telp : 6285123345221"
                         android:textSize="18sp"  />
 
                     <TextView

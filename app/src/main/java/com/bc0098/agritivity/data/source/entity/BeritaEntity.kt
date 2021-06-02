@@ -6,6 +6,7 @@ data class BeritaEntity (
         val author: String,
         val title: String,
         val description: String,
+        val url: String,
         val waktu: String,
         val sumber: SourceResponse,
         val image: String,

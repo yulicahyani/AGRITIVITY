@@ -17,6 +17,9 @@ data class Berita(
     @SerializedName("description")
     val description: String,
 
+    @SerializedName("url")
+    val url: String,
+
     @SerializedName("publishedAt")
     val waktu: String,
 
