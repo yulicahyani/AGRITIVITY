@@ -1,5 +1,6 @@
 package com.bc0098.agritivity
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -30,7 +31,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_posting, R.id.navigation_profile))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
 
     }
 

@@ -17,6 +17,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "CLOUD_FUNCTION", '"https://us-central1-agritivity.cloudfunctions.net/"')
+        buildConfigField("String", "YOUTUBE_API_KEY", '"AIzaSyDRbZidoeUUIMQyqNddNCT0cSyLKYExGl4"')
+        buildConfigField("String", "NEWS_API_KEY", '"df0c20ad63ee44afa5d8aafefbc0fa76"')
     }
 
     buildTypes {

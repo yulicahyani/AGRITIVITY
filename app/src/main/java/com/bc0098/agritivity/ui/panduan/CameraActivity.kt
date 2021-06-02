@@ -65,6 +65,10 @@ class CameraActivity : AppCompatActivity() {
         }
         outputDirectory = getOutputDirectory()
         cameraExecutor = Executors.newSingleThreadExecutor()
+
+        activityCameraBinding.backBtn.setOnClickListener{
+            onBackPressed()
+        }
     }
 
     private fun takePhoto() {

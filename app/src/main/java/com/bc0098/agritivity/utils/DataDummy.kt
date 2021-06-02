@@ -12,7 +12,7 @@ object DataDummy {
         petani.add(
                 PetaniEntity(
                         1,
-                        "Sedana Wijaya",
+                        "Yuli Cahyani",
                         "Petani(Buruh Tani)",
                         "Karangasem",
                         "10 tahun",
@@ -31,7 +31,7 @@ object DataDummy {
                         "Singaraja",
                         "12 tahun",
                         "Menanam Sayur-sayuran",
-                        "6285647065215",
+                        "6285739063468",
                         "Saya pekerja yang sangat rajin pantang menyerah dan siap bekerja keras.",
                         R.drawable.petani
                 )

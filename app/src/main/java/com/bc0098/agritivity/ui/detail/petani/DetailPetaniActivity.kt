@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bc0098.agritivity.R
@@ -34,7 +35,9 @@ class DetailPetaniActivity : AppCompatActivity() {
         setContentView(activityDetailPetaniBinding.root)
        contentDetailPetaniBinding = activityDetailPetaniBinding.contentDetailPetani
 
-        setSupportActionBar(findViewById(R.id.toolbar))
+
+        setSupportActionBar(activityDetailPetaniBinding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val petaniId = intent.getIntExtra(EXTRA_ID, 0)
 

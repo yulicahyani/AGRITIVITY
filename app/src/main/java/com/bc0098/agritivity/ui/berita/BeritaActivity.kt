@@ -3,6 +3,7 @@ package com.bc0098.agritivity.ui.berita
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,6 +22,11 @@ class BeritaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         activityBeritaBinding = ActivityBeritaBinding.inflate(layoutInflater)
         setContentView(activityBeritaBinding.root)
+
+        val actionBar: ActionBar? = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.setDisplayShowHomeEnabled(true)
+        actionBar?.title = "Berita"
 
         beritaAdapter = BeritaAdapter()
         beritaViewModelFactory = ViewModelFactory.getInstance(this)

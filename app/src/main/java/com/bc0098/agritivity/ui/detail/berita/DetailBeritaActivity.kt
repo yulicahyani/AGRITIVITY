@@ -1,6 +1,7 @@
 package com.bc0098.agritivity.ui.detail.berita
 
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -32,6 +33,9 @@ class DetailBeritaActivity : AppCompatActivity() {
         setContentView(activityDetailBeritaBinding.root)
         contentDetailBeritaBinding = activityDetailBeritaBinding.contentDetailBerita
         setSupportActionBar(findViewById(R.id.toolbar))
+
+        setSupportActionBar(activityDetailBeritaBinding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val author1 = intent.getStringExtra(author)
         val title1 = intent.getStringExtra(titles)

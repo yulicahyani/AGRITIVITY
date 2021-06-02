@@ -1,11 +1,12 @@
 package com.bc0098.agritivity.ui.panduan
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bc0098.agritivity.data.source.entity.PanduanEntity
 import com.bc0098.agritivity.databinding.ItemsPanduanBinding
-import com.bc0098.agritivity.databinding.ItemsPetaniBinding
+import com.bc0098.agritivity.ui.detail.petani.DetailPetaniActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -45,7 +46,13 @@ class PanduanAdapter: RecyclerView.Adapter<PanduanAdapter.PanduanViewHolder>()  
                 judulVideo.text = panduan.snippet.title
                 channelTgl.text = StringBuilder("${panduan.snippet.channelTitle} - ${panduan.snippet.publishedAt}")
 
-                val videoUrl = "https://youtu.be/"+ panduan.id.videoId
+                val videoUrl = "https://youtu.be/${panduan.id.videoId}"
+
+                itemView.setOnClickListener {
+                    val intent = Intent(it.context, YoutubeViewActivity::class.java)
+                    intent.putExtra(YoutubeViewActivity.VIDEO_URL, videoUrl)
+                    it.context.startActivity(intent)
+                }
             }
         }
     }

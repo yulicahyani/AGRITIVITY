@@ -2,6 +2,7 @@ package com.bc0098.agritivity.ui.pekerjaan
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bc0098.agritivity.databinding.ActivityPekerjaanBinding
@@ -17,6 +18,11 @@ class PekerjaanActivity : AppCompatActivity() {
 
         activityPekerjaanBinding = ActivityPekerjaanBinding.inflate(layoutInflater)
         setContentView(activityPekerjaanBinding.root)
+
+        val actionBar: ActionBar? = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.setDisplayShowHomeEnabled(true)
+        actionBar?.title = "Pekerjaan"
 
         pekerjaanViewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[PekerjaanViewModel::class.java]
         val pekerjaan = pekerjaanViewModel.getDaftarPekerjaan()

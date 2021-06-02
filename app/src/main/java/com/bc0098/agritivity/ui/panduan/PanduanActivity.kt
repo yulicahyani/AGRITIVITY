@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bc0098.agritivity.MainActivity
 import com.bc0098.agritivity.vm.ViewModelFactory
 import com.bc0098.agritivity.databinding.ActivityPanduanBinding
@@ -27,6 +29,11 @@ class PanduanActivity : AppCompatActivity() {
         activityPanduanBinding = ActivityPanduanBinding.inflate(layoutInflater)
         setContentView(activityPanduanBinding.root)
 
+        val actionBar: ActionBar? = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.setDisplayShowHomeEnabled(true)
+        actionBar?.title = "Panduan"
+
         activityPanduanBinding.cameraBtn.setOnClickListener{
             val moveIntent = Intent(it.context, CameraActivity::class.java)
             startActivity(moveIntent)
@@ -35,15 +42,16 @@ class PanduanActivity : AppCompatActivity() {
         val hasil = intent.getStringExtra(HASIL_PREDIKSI)
         activityPanduanBinding.resultPredict.text = hasil
 
-//        val keyword = "panduan bertani"
+        val keyword = "panduan bertani"
 
-        val keyword = hasil
+//        val keyword = hasil
 
         panduanAdapter = PanduanAdapter()
         panduanViewModelFactory = ViewModelFactory.getInstance(this)
         panduanViewModel = ViewModelProvider(this, panduanViewModelFactory)[PanduanViewModel::class.java]
 
         activityPanduanBinding.searchBtn.setOnClickListener {
+            activityPanduanBinding.searchGuide.visibility = View.GONE
             activityPanduanBinding.progressBar.visibility = View.VISIBLE
             if (keyword != null) {
                 panduanViewModel.getVideoResult(keyword).observe(this, {
@@ -60,14 +68,7 @@ class PanduanActivity : AppCompatActivity() {
             rvPanduan.adapter = panduanAdapter
         }
 
-        onBackPressed()
 
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-        val intent = Intent(applicationContext,MainActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
 }

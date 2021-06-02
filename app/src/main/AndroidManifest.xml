@@ -16,24 +16,53 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AGRITIVITY">
-        <activity android:name=".ui.petani.PetaniActivity"></activity>
-        <activity android:name=".ui.berita.BeritaActivity" />
-        <activity android:name=".ui.pekerjaan.PekerjaanActivity" />
+        <activity android:name=".ui.panduan.YoutubeViewActivity"></activity>
+        <activity android:name=".ui.petani.PetaniActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".ui.berita.BeritaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".ui.pekerjaan.PekerjaanActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity android:name=".ui.panduan.HasilCameraActivity" />
         <activity android:name=".ui.panduan.CameraActivity" />
-        <activity android:name=".ui.panduan.PanduanActivity" />
+        <activity android:name=".ui.panduan.PanduanActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".ui.detail.petani.DetailPetaniActivity"
             android:label="@string/title_activity_detail_petani"
-            android:theme="@style/Theme.AGRITIVITY.NoActionBar" />
+            android:theme="@style/Theme.AGRITIVITY.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.petani.PetaniActivity" />
+        </activity>
         <activity
             android:name=".ui.detail.berita.DetailBeritaActivity"
             android:label="@string/title_activity_detail_berita"
-            android:theme="@style/Theme.AGRITIVITY.NoActionBar" />
+            android:theme="@style/Theme.AGRITIVITY.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.berita.BeritaActivity" />
+        </activity>
         <activity
             android:name=".ui.detail.pekerjaan.DetailPekerjaanActivity"
             android:label="@string/title_activity_detail_pekerjaan"
-            android:theme="@style/Theme.AGRITIVITY.NoActionBar" />
+            android:theme="@style/Theme.AGRITIVITY.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.pekerjaan.PekerjaanActivity" />
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

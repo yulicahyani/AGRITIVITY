@@ -76,7 +76,6 @@ class HasilCameraActivity : AppCompatActivity() {
     }
 
     private fun showResponse(response: String) {
-        activityHasilCameraBinding.hasilPrediksi.text = response
         val intent = Intent(this, PanduanActivity::class.java)
         intent.putExtra(PanduanActivity.HASIL_PREDIKSI, response)
         startActivity(intent)

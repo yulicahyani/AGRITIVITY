@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bc0098.agritivity.R
@@ -36,6 +37,9 @@ class DetailPekerjaanActivity : AppCompatActivity() {
         contentDetailPekerjaanBinding = activityDetailPekerjaanBinding.contentDetailPekerjaan
 
         setSupportActionBar(findViewById(R.id.toolbar))
+
+        setSupportActionBar(activityDetailPekerjaanBinding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val pekerjaanId = intent.getIntExtra(EXTRA_ID, 0)
 

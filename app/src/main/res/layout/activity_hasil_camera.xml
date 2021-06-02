@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ui.panduan.HasilCameraActivity">
 
-    <LinearLayout
+
+    <ImageView
+        android:id="@+id/image_capture"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="28dp">
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/petani"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="16dp" />
 
-        <ImageView
-            android:id="@+id/image_capture"
-            android:scaleType="centerCrop"
-            android:layout_width="350dp"
-            android:layout_height="450dp"
-            android:layout_gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/upload_btn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="80dp"
+        android:background="@color/green"
+        android:text="Upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897" />
 
-        <ImageButton
-            android:id="@+id/upload_btn"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_baseline_send_24"
-            android:background="@color/green"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"/>
-
-    </LinearLayout>
-
-    <ImageButton
+    <Button
         android:id="@+id/upload_btn_hasil"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:src="@drawable/ic_baseline_send_24"
-        android:background="@color/green"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginEnd="80dp"
+        android:background="@color/green"
+        android:text="Predict"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/upload_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.897" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/hasil_prediksi"
-        android:text="hasil prediksi"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
