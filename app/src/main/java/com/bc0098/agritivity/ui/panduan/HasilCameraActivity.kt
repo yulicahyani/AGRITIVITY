@@ -3,6 +3,7 @@ package com.bc0098.agritivity.ui.panduan
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -33,7 +34,6 @@ class HasilCameraActivity : AppCompatActivity() {
 
     private lateinit var activityHasilCameraBinding: ActivityHasilCameraBinding
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityHasilCameraBinding = ActivityHasilCameraBinding.inflate(layoutInflater)
@@ -52,13 +52,13 @@ class HasilCameraActivity : AppCompatActivity() {
         }
 
         activityHasilCameraBinding.uploadBtnHasil.setOnClickListener {
-            callCloudfunction()
+            callCloudFunction()
 
         }
 
     }
 
-    private fun callCloudfunction(){
+    private fun callCloudFunction(){
 
         CloudFunctionApiConfig.getApiService().getResult().enqueue(object : Callback<PredictResponse>{
             override fun onResponse(call: Call<PredictResponse>, response: Response<PredictResponse>, ) {
@@ -77,6 +77,9 @@ class HasilCameraActivity : AppCompatActivity() {
 
     private fun showResponse(response: String) {
         activityHasilCameraBinding.hasilPrediksi.text = response
+        val intent = Intent(this, PanduanActivity::class.java)
+        intent.putExtra(PanduanActivity.HASIL_PREDIKSI, response)
+        startActivity(intent)
     }
 
 

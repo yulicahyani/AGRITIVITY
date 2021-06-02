@@ -1,10 +1,13 @@
 package com.bc0098.agritivity.ui.berita
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bc0098.agritivity.data.source.entity.BeritaEntity
 import com.bc0098.agritivity.databinding.ItemsBeritaBinding
+import com.bc0098.agritivity.ui.detail.berita.DetailBeritaActivity
+import com.bc0098.agritivity.ui.detail.pekerjaan.DetailPekerjaanActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -43,6 +46,18 @@ class BeritaAdapter: RecyclerView.Adapter<BeritaAdapter.BeritaViewHolder>() {
                 judulBerita.text = berita.title
                 waktuBerita.text = berita.waktu
                 deskripsiBerita.text = berita.description
+
+
+                itemView.setOnClickListener {
+                    val intent = Intent(it.context, DetailBeritaActivity::class.java)
+                    intent.putExtra(DetailBeritaActivity.author, berita.author)
+                    intent.putExtra(DetailBeritaActivity.titles, berita.title)
+                    intent.putExtra(DetailBeritaActivity.waktu, berita.waktu)
+                    intent.putExtra(DetailBeritaActivity.sumber, berita.sumber.name)
+                    intent.putExtra(DetailBeritaActivity.image, berita.image)
+                    intent.putExtra(DetailBeritaActivity.contents, berita.content)
+                    it.context.startActivity(intent)
+                }
             }
         }
     }

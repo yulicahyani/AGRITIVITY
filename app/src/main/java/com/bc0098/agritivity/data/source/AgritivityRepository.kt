@@ -3,8 +3,10 @@ package com.bc0098.agritivity.data.source
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.bc0098.agritivity.data.source.entity.BeritaEntity
+import com.bc0098.agritivity.data.source.entity.PanduanEntity
 import com.bc0098.agritivity.data.source.remote.RemoteDataSource
 import com.bc0098.agritivity.data.source.remote.response.Berita
+import com.bc0098.agritivity.data.source.remote.response.VideoYoutube
 
 class AgritivityRepository private constructor(private val remoteDataSource: RemoteDataSource): AgritivityDataSource{
 
@@ -43,6 +45,28 @@ class AgritivityRepository private constructor(private val remoteDataSource: Rem
         })
 
         return beritaResults
+    }
+
+    override fun geVideoResult(q: String): LiveData<List<PanduanEntity>> {
+        val videoresults = MutableLiveData<List<PanduanEntity>>()
+        remoteDataSource.geVideoResult(q, object : RemoteDataSource.LoadVideoResultCallback{
+            override fun onAllVideoReceived(videoResponse: List<VideoYoutube>) {
+                val listVideo = ArrayList<PanduanEntity>()
+                for (response in videoResponse){
+                    val video = PanduanEntity(
+                        response.id,
+                        response.snippet
+                    )
+
+                    listVideo.add(video)
+                }
+
+                videoresults.postValue(listVideo)
+            }
+
+        })
+
+        return videoresults
     }
 
 }

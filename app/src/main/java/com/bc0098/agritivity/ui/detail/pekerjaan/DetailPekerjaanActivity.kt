@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.content_detail_pekerjaan.*
 class DetailPekerjaanActivity : AppCompatActivity() {
 
     companion object{
-        const val EXTRA_ID= "extra_id"
+        const val EXTRA_ID = "extra_id"
     }
 
     private lateinit var activityDetailPekerjaanBinding: ActivityDetailPekerjaanBinding

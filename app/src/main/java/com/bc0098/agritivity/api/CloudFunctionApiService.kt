@@ -1,7 +1,7 @@
 package com.bc0098.agritivity.api
 
 import com.bc0098.agritivity.data.source.remote.response.PredictResponse
-import com.bc0098.agritivity.ui.panduan.RequestCloudFunction
+import com.bc0098.agritivity.ui.panduan.RequestBodyJson
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.Body
@@ -15,6 +15,6 @@ interface CloudFunctionApiService {
 
     @POST("predict")
     fun getResult(
-        @Body requestBody: RequestBody = RequestCloudFunction.callCloudfunction()
+        @Body requestBody: RequestBody = RequestBodyJson.createJson()
     ): Call<PredictResponse>
 }

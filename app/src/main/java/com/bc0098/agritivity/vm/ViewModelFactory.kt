@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bc0098.agritivity.data.source.AgritivityRepository
 import com.bc0098.agritivity.di.Injection
 import com.bc0098.agritivity.ui.berita.BeritaViewModel
+import com.bc0098.agritivity.ui.panduan.PanduanViewModel
 
 class ViewModelFactory private constructor(private val mAgritivityRepository: AgritivityRepository): ViewModelProvider.NewInstanceFactory(){
 
@@ -26,6 +27,11 @@ class ViewModelFactory private constructor(private val mAgritivityRepository: Ag
             modelClass.isAssignableFrom(BeritaViewModel::class.java) -> {
                 BeritaViewModel(mAgritivityRepository) as T
             }
+
+            modelClass.isAssignableFrom(PanduanViewModel::class.java) -> {
+                PanduanViewModel(mAgritivityRepository) as T
+            }
+
             else -> throw Throwable("Unknown ViewModel class: " + modelClass.name)
         }
     }

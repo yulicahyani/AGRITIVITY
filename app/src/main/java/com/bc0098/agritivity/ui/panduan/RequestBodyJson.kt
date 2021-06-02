@@ -5,11 +5,10 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 
-object RequestCloudFunction {
+object RequestBodyJson {
 
-    private const val REQUEST_URL = "https://us-central1-agritivity.cloudfunctions.net/predict"
 
-    fun callCloudfunction(): RequestBody{
+    fun createJson(): RequestBody{
 
         val jsonObject = JSONObject()
         jsonObject.put("image_url", "https://storage.googleapis.com/agritivity.appspot.com/images/photo-predict")
