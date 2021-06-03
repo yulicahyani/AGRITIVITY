@@ -1,6 +1,5 @@
 package com.bc0098.agritivity.ui.panduan
 
-import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -111,60 +110,3 @@ class HasilCameraActivity : AppCompatActivity() {
         }
     }
 }
-
-//    private fun callCloudfunction(){
-//
-//        val client = OkHttpClient.Builder()
-//            .connectTimeout(30 , TimeUnit.SECONDS)
-//            .readTimeout(30, TimeUnit.SECONDS)
-//            .writeTimeout(30, TimeUnit.SECONDS)
-//            .build()
-//
-//        val jsonObject = JSONObject()
-//        jsonObject.put("image_url", "https://storage.googleapis.com/agritivity.appspot.com/images/photo-predict")
-//
-//        val body = jsonObject.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
-//
-//        val request: Request = Request.Builder()
-//            .url(REQUEST_URL)
-//            .post(body)
-//            .build()
-//
-//        client.newCall(request).enqueue(object : Callback {
-//            override fun onFailure(call: Call, e: IOException) {
-//                e.printStackTrace()
-//            }
-//
-//            override fun onResponse(call: Call, response: Response) {
-//                    if (!response.isSuccessful){
-//                        throw IOException("Unexpected code $response")
-//                    }else{
-////
-////                        for ((name, value) in response.headers) {
-////                            println("$name: $value")
-////                        }
-//
-//                        println(response.body!!.string())
-////                        hasil = response.body!!.toString()
-////                        activityHasilCameraBinding.hasilPrediksi.text = response.body!!.string()
-//
-//
-//                        lifecycleScope.launch(Dispatchers.Default){
-//                            delay(2000)
-//                            withContext(Dispatchers.Main) {
-//                                activityHasilCameraBinding.hasilPrediksi.text = response.body!!.toString()
-//                            }
-//                        }
-////
-////                        Handler(Looper.getMainLooper()).postDelayed({
-////                            val intent = Intent(applicationContext, PanduanActivity::class.java)
-////                            intent.putExtra(PanduanActivity.HASIL_PREDIKSI, response.body!!.string())
-////                            startActivity(intent)
-////                            finish()
-////                        }, 2000)
-//                    }
-//            }
-//
-//        })
-//
-//    }

@@ -17,7 +17,7 @@ object DataDummy {
                 "Singaraja",
                 "2 tahun",
                 "Menanam Sayur-sayuran",
-                "6285739063468",
+                "6281237707811",
                 "Saya seorang petani, saya memiliki lahan pertanian seluas 2 hektare",
                 R.drawable.user1
             )

@@ -6,10 +6,7 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
-import com.bc0098.agritivity.R
 import com.bc0098.agritivity.databinding.ActivityBeritaWebViewBinding
-import com.bc0098.agritivity.databinding.ActivityYoutubViewBinding
-import com.bc0098.agritivity.ui.panduan.YoutubeViewActivity
 
 class BeritaWebViewActivity : AppCompatActivity() {
 

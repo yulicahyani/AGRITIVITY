@@ -1,6 +1,7 @@
 package com.bc0098.agritivity.ui.panduan
 
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -49,8 +50,7 @@ class PanduanAdapter: RecyclerView.Adapter<PanduanAdapter.PanduanViewHolder>()  
                 val videoUrl = "https://youtu.be/${panduan.id.videoId}"
 
                 itemView.setOnClickListener {
-                    val intent = Intent(it.context, YoutubeViewActivity::class.java)
-                    intent.putExtra(YoutubeViewActivity.VIDEO_URL, videoUrl)
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=${panduan.id.videoId}"))
                     it.context.startActivity(intent)
                 }
             }
